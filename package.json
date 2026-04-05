@@ -1,0 +1,21 @@
+{
+  "name": "prog3-grupobb",
+  "version": "1.0.0",
+  "description": "Proyecto integrador",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TobiasHeynen/prog3-GrupoBB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/TobiasHeynen/prog3-GrupoBB/issues"
+  },
+  "homepage": "https://github.com/TobiasHeynen/prog3-GrupoBB#readme"
+}
