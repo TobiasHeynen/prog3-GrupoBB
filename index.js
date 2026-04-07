@@ -1,4 +1,5 @@
 import fs from 'fs/promises';
+import { json } from 'stream/consumers';
 
 const BASE = 'https://thronesapi.com/api/v2/Characters';
 
@@ -68,6 +69,63 @@ async function main() {
   } catch (error) {
     console.error(' Error:', error.message);
   }
+}
+
+
+//leer archivo
+
+const leerarchivo = async () => {
+  const data = await fs.readFile('personajes.json', 'utf-8');
+  return JSON.parse(data);
+};
+
+//agregar al final
+async function agregarAlFinal(){
+  let personajes = await leerarchivo();
+
+  const nuevo = {
+    id: 999,
+    fullName: 'Nuevo personaje'
+  }
+}
+personajes.push(nuevo);
+console.log ('Agregado al final:' , nuevo);
+await fs.writeFile('personaje,json', JSON.stringify(personaje,null,2));
+
+//agregar al inicio
+async function agregarAlInicio(){
+  let personajes= await leerarchivo();
+  const personaje1= {id:1000, fullName: "inicio 1"};
+  const personaje2= {id:1001, fullName: "inicio 2"};
+  personajes.unshift(personajes1, personaje2);
+  await fs.writeFile('personajes.json', JSON.stringify(personajes, null,2));
+}
+
+//eliminar primero
+async function eliminarPrimero(){
+  let personajes= await leerarchivo();
+  const eliminado=personajes.shift();
+  console.long('personaje elinado', eliminado);
+  await fs.writeFile('personaje.json', JSON.stringify(personajes, null,2));
+
+}
+//crear archivo con id y nombre
+async function crearArchivoReducido(){
+  let personajes1= await leerarchivo();
+  const filtrado=personajes.map(p=> ({
+    id: p.id,
+    fullName: p.fullName
+  }));
+  await fs.writeFile('personaje_reducido.json', JSON.stringify(filtrado, null,2));
+  console.log('archivo reducido creado');
+}
+// ordenar y mostrar
+async function ordenar(){
+  const data= await fs.readFile('personaje_reducido.json', 'utf-8');
+  let filtrados= JSON.parse(data);
+  filtrado.sort((a, b) =>b.fullName.localeCompare(a.fullName));
+  console.long('ordenados decendente: ');
+  console.long(filtrados);
 }
 
 main();
