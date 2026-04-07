@@ -141,7 +141,7 @@ async function main() {
     // d) Guardar los datos del primer GET
     await guardarEnArchivo(personajes);
 
-    // 👇 PUNTO 2
+    //  PUNTO 2
     // a) Agregar al final
     await agregarAlFinal();
     // b) Agregar al inicio
