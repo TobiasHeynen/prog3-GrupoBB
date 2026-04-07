@@ -157,3 +157,5 @@ async function main() {
     console.error(' Error:', error.message);
   }
 }
+
+main()

@@ -1,5 +1,9 @@
 [
   {
+    "id": 1001,
+    "fullName": "Inicio 2"
+  },
+  {
     "id": 0,
     "firstName": "Daenerys",
     "lastName": "Targaryen",
@@ -528,5 +532,9 @@
     "family": "Bronn",
     "image": "bronn.jpg",
     "imageUrl": "https://thronesapi.com/assets/images/bronn.jpg"
+  },
+  {
+    "id": 999,
+    "fullName": "Personaje Final"
   }
 ]
