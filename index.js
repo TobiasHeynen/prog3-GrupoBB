@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 
 const BASE = 'https://thronesapi.com/api/v2/Characters';
---------// PUNTO 1 --------
+// PUNTO 1
 
 // a) GET
 async function obtenerTodosLosPersonajes() {
@@ -50,7 +50,7 @@ async function guardarEnArchivo(datos) {
   await fs.writeFile('personajes.json', JSON.stringify(datos, null, 2), 'utf-8');
   console.log(' Archivo guardado correctamente.');
 }
- --------// PUNTO 2 --------
+// PUNTO 2
 
 // Leer archivo
 async function leerArchivo() {
